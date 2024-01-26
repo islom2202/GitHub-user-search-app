@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./publics/gulp/styles.css">
+  <title>github-user-search</title>
+</head>
+<body>
+  <!------------------header-->
+  <header>
+    <h1 class="logo">devfinder</h1>
+    <button class="mode-toggler">
+      <p>DARK</p>
+      <img src="./publics/assets/icons/icon-moon.svg" alt="moon-icon">
+    </button>
+  </header>
+  <!------------------search-->
+  <form class="form">
+    <img src="./publics/assets/icons/icon-search.svg" alt="search icon" class="form__search-icon">
+    <input class="form__input" type="text" placeholder="Search GitHub username..." name="input">
+    <span class="form__error"></span>
+    <button type="submit" class="form__button">Search</button>
+  </form>
+  <!------------------main-->
+  <main class="main">
+    <!--figure-->
+    <figure class="main__figure">
+      <img src="./publics/assets/images/cat.png" alt="user-img" class="user-img">
+      <!--user-->
+      <figcaption>
+        <div>
+          <h2 class="user_name">
+            The Octocat
+          </h2>
+          <a class="user_nickname" target="_blank">
+              @octocat
+          </a>
+        </div>  
+        <time datetime="2023-03-19">Joined 25 Jan 2011</time>
+      </figcaption>
+    </figure>
+    <!--bio-->
+    <p class="main__bio">This profile has no bio</p>
+    <!--stats-->
+    <ul class="main__stats">
+        <li class="main__stats_statname">
+          Repos
+          <p class="main__stats_statresult repos">8</p>
+        </li>
+        <li class="main__stats_statname">
+          Followers
+          <p class="main__stats_statresult followers">11987</p>
+        </li>
+        <li class="main__stats_statname">
+          Following
+          <p class="main__stats_statresult following">9</p>
+        </li>
+    </ul>
+    <!--address-->
+    <ul class="main__address">
+        <li class="main__address_links">
+          <img src="./publics/assets/icons/icon-location.svg" alt="icon-location">
+          <span class="location">San Francisco</span>
+        </li>
+        <li  class="main__address_links">
+          <img src="./publics/assets/icons/icon-twitter.svg" alt="icon-twitter">
+          <span class="twitter">Not, Available</span>
+        </li>
+        <li  class="main__address_links">
+          <img src="./publics/assets/icons/icon-website.svg" alt="icon-website">
+          <span class="website">https://github.blog</span>
+        </li>
+        <li  class="main__address_links">
+          <img src="./publics/assets/icons/icon-company.svg" alt="icon-company">
+          <span class="company">@github</span>
+        </li>
+    </ul>
+  </main>
+  <!--pending-->
+  <div class="loading">
+    <span class="rotate--pending"></span>
+  </div>
+  <script src="./publics/gulp/index.js" type="module"></script>
+</body>
+</html>

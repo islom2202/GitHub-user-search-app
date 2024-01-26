@@ -1,0 +1,64 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/mixins" as *;
+
+//----------------mobile
+.form{
+  margin-inline: $mobile-inline;
+  margin-block: 1.6rem;
+  padding: 0.7rem;
+  @include FLEX(center, center);
+  gap: 0.5rem;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.042);
+  border-radius: 1rem;
+  background-color: $white;
+  position: relative;
+  &__search-icon{
+    margin-inline: 0.7rem;
+  }
+  &__input{
+    flex: 1;
+  }
+  &__button{
+    height: 4.5rem;
+    width: 8.3rem;
+    background-color: $blue;
+    color: $white;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    border-radius: 1rem;
+  }
+  &__error{
+    color: $red;
+    position: absolute;
+    right: 0;
+    top: -3rem;
+  }
+}
+//----------------tablet
+@include responsive($tablet){
+  .form{
+    margin-inline: $tablet-inline;
+    padding: 1rem;
+    &__search-icon{
+      margin-inline: 2rem;
+      width: 2.5rem;
+      height: 2.4rem;
+    }
+    &__button{
+      width: 10.6rem;
+      height: 4.9rem;
+    }
+    &__error{
+      position: static;
+      margin-inline: 2rem;
+    }
+  }
+}
+
+//----------------desktop
+@include responsive($desktop){
+  .form{
+    margin-inline: $desktop-inline;
+  }
+}

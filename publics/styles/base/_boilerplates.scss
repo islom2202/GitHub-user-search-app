@@ -1,0 +1,27 @@
+@use "../abstract/colors" as *;
+*{
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  list-style: none;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+  text-underline-offset: .5rem;
+}
+body{
+  background-color: $light-blue;
+}
+.visually-hidden{
+  display: none;
+}
+body, main{
+  transition: 0.3s ease;
+}

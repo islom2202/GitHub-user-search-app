@@ -1,0 +1,98 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/mixins" as *;
+
+//--------------- mobile
+.main{
+  display: grid;
+  margin-inline: $mobile-inline;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.042);
+  background-color: $white;
+  border-radius: 2rem;
+  padding-block: 3.2rem;
+  padding-inline: 2.4rem;
+  &__figure{
+    @include FLEX();
+    gap: 2rem;
+    img{
+      width: 7rem;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+  &__bio{
+    margin-block: 3.2rem;
+  }
+  &__stats{
+    @include FLEX(space-between);
+    padding: 1.8rem 2.4rem;
+    background-color: $light-blue;
+    border-radius: 1rem;
+    margin-bottom: 2.4rem;
+  }
+  &__address{
+    display: grid;
+    gap: 2rem;
+    &_links{
+      @include FLEX(start, center);
+      gap: 1.8rem;
+      span{
+        width: 100%;
+      }
+    }
+  }
+}
+
+//--------------- tablet
+@include responsive($tablet){
+  .main{
+    padding: 4rem;
+    margin-inline: $tablet-inline;
+    &__figure img{
+      width: 11.7rem;
+    }
+    &__stats{
+      padding: 1.6rem, 3.2rem;
+    }
+    &__address{
+      grid-template-columns: 1fr 1fr;
+    }
+    
+  }
+}
+
+//--------------- desktop
+@include responsive($desktop){
+  .main{
+    margin-inline: $desktop-inline;
+    grid-template-columns: 11.7rem 1fr;
+    grid-template-areas: 
+    'figure figure'
+    '. bio'
+    '. stats'
+    '. address'
+    ;
+    gap: 2rem 3rem;
+    padding: 4.8rem;
+    &__figure {
+    grid-area: figure;
+    gap: 3rem;
+    figcaption{
+      @include FLEX(start, baseline);
+      gap: 4rem;
+    }
+    }
+    &__bio{
+      grid-area: bio;
+      margin-top: -6rem;
+    }
+    &__stats{
+      grid-area: stats;
+      padding: 1.6rem 3.2rem;
+    }
+    &__address{
+      grid-area: address;
+    }
+  }
+}

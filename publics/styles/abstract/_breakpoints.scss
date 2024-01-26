@@ -1,0 +1,11 @@
+$mobile: 365px;
+$tablet: 768px;
+$desktop: 1450px;
+$mobile-inline: 5%;
+$tablet-inline: 10%;
+$desktop-inline: 25%;
+@mixin responsive($size){
+  @media (min-width: $size) {
+    @content;
+  }
+}

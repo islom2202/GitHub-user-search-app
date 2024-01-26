@@ -1,0 +1,31 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/mixins" as *;
+//------------- mobile
+header{
+  @include FLEX(space-between, center);
+  padding-inline: $mobile-inline;
+  padding-block: 3rem;
+  .mode-toggler{
+    @include FLEX(space-between, center);
+    gap: 1.5rem;
+    padding: .5rem;
+    &:focus{
+      border: 1px dashed;
+    }
+  }
+}
+
+//------------- tablet
+@include responsive($tablet){
+  header{
+    padding-inline: $tablet-inline;
+  }
+}
+
+//------------- desktop
+@include responsive($desktop){
+  header{
+    padding-inline: $desktop-inline;
+    margin-top: 3rem;
+  }
+}

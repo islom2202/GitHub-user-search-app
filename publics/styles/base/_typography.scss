@@ -1,0 +1,36 @@
+@use "../abstract/colors" as *;
+$typography:(
+  logo: 2.6rem,
+  user_name: clamp(1.6rem, 3vw, 2.6rem),
+  user_nickname: clamp(1.3rem, 2vw, 1.6rem),
+  main__stats_statname: clamp(1.1rem, 2vw, 1.3rem),
+  main__stats_statresult: clamp(1.6rem, 3vw, 2.2rem),
+  main__address_links: clamp(1.3rem, 2.5vw, 1.5rem),
+  form__input: clamp(1.3rem, 2.5vw, 1.8rem),
+  form__error: 1.6rem,
+  form__button: clamp(1.4rem, 2.5vw, 1.6rem)
+);
+@each $tag, $size in $typography{
+  .#{$tag}{
+    font-size: $size;
+  }
+};
+p, time, span{
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+}
+.mode-toggler{
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 550;
+  color: $gray;
+}
+.main__stats_statresult{
+  font-weight: 600;
+}
+.user_name{
+  line-height: 120%;
+}
+.user_nickname{
+  color: $blue;
+  font-weight: 300;
+}

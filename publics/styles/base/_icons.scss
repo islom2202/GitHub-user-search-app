@@ -1,0 +1,15 @@
+$icons:(
+  company: (width: 2rem, height: 2rem),
+  location: (width: 1.4rem, height: 2rem),
+  moon: (width: 2rem, height: 2rem),
+  search: (width: 2rem, height: 1.9rem),
+  sun: (width: 2rem, height: 2rem),
+  twitter: (width: 2rem, height: 1.8rem),
+  website: (width: 2rem, height: 2rem)
+);
+@each $tag, $size in $icons{
+  .#{$tag}{
+    width: map-get($size, width);
+    height: map-get($size, height);
+  }
+}

@@ -1,0 +1,23 @@
+@use "../abstract/colors" as *;
+.dark{
+  background-color: $body-dark;
+  //header
+  header{
+    color: $light-blue;
+  };
+  // search
+  form{
+    background-color: $main-dark;
+    input, input::placeholder{
+      color: $light-blue;
+    }
+  };
+  // main
+  .main{
+    background-color: $main-dark;
+    color: $light-blue;
+    &__stats{
+      background-color: $body-dark;
+    }
+  }
+}
