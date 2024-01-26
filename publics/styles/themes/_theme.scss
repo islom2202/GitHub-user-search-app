@@ -16,6 +16,9 @@
   .main{
     background-color: $main-dark;
     color: $light-blue;
+    a{
+      color: $light-blue;
+    }
     &__stats{
       background-color: $body-dark;
     }
