@@ -17,7 +17,7 @@
     background-color: $main-dark;
     color: $light-blue;
     a{
-      color: $light-blue;
+      color: inherit;
     }
     &__stats{
       background-color: $body-dark;
