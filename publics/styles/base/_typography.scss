@@ -34,3 +34,11 @@ p, time, span{
   color: $blue;
   font-weight: 300;
 }
+a:hover{
+  text-decoration: underline;
+  text-underline-offset: .5rem;
+}
+a{
+  display: block;
+  color: $white;
+}

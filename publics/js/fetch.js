@@ -51,11 +51,11 @@ function uploadPage(data){
   datatags.userimg.setAttribute("src", fetched.avatar_url);
   datatags.bio.textContent = fetched.bio;
   datatags.repos.textContent = fetched.public_repos;
-  datatags.repos.setAttribute('href', fetched.repos_url)
+  datatags.repos.setAttribute("href", `${fetched.html_url}?tab=repositories`)
   datatags.followers.textContent = fetched.followers;
-  datatags.followers.setAttribute('href', fetched.followers_url)
+  datatags.followers.setAttribute('href', `${fetched.html_url}?tab=followers`)
   datatags.following.textContent = fetched.following;
-  datatags.following.setAttribute('href', fetched.following_url);
+  datatags.following.setAttribute("href", `${fetched.html_url}?tab=following`)
   datatags.location.textContent = fetched.location ? fetched.location : 'Not, Available';
   datatags.twitter.textContent = fetched.twitter_username ? fetched.twitter_username : 'Not, Available';
   datatags.website.textContent = fetched.site_admin ? fetched.site_admin : 'Not, Available';
